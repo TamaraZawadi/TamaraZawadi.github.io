@@ -12,11 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const phrases = [
-                "Ethical Hacking Done Right",
-                "Cybersecurity Solutions That Matter",
-                "Defending Your Digital Frontier",
-                "Innovative Security Strategies",
-                "Protecting Your Digital Assets"
+                "Tamara Zawadi",
+                "A Cybersecurity Enthusiast",
+                "A Tech Innovator"
             ];
 
             let phraseIndex = 0;

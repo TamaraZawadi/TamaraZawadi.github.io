@@ -61,23 +61,23 @@ const Nav: React.FC = () => {
       fluid
     >
       <Navbar.Brand href="/">
-        <img 
+        {/* <img 
           src="./assets/images/hacker.png" 
           className={`mr-3 transition-all duration-300 ${
             isScrolled ? 'h-5 sm:h-7' : 'h-6 sm:h-9'
           }`} 
           alt="Logo" 
-        />
+        /> */}
         <span className={`self-center whitespace-nowrap font-bold dark:text-white transition-all duration-300 ${
           isScrolled ? 'text-lg' : 'text-2xl'
         }`}>
-          HAK3R
+          Tamara Zawadi
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
         <DarkThemeToggle />
         <a
-        href="https://github.com/Dan-Duran/hak3r"
+        href="https://github.com/TamaraZawadi"
         target="_blank"
         rel="noopener noreferrer"
         className={`hidden md:flex mx-3 bg-gray-800 hover:bg-gray-900 py-2 px-4 transition-all duration-300 flex items-center gap-2 ${
@@ -97,7 +97,7 @@ const Nav: React.FC = () => {
             clipRule="evenodd"
           />
         </svg>
-        <span className="text-white font-medium">FREE Download</span>
+        
       </a>
         <button
           type="button"
@@ -106,12 +106,12 @@ const Nav: React.FC = () => {
             isScrolled ? 'text-sm px-3 py-1.5' : 'text-md px-4 py-2'
           }`}
         >
-          Contact Me!
+          Contact Me
         </button>
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        {['home', 'services', 'about', 'contact'].map((section) => (
+        {['home', 'about', 'projects', 'contact'].map((section) => (
           <button 
             key={section}
             onClick={() => scrollToSection(section)}
