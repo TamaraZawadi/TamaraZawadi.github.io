@@ -184,7 +184,7 @@ const App: React.FC = () => {
         </li>
         <li>
           <a 
-            href="https://www.credly.com/badges/6ce66db6-55c1-43df-bde6-bb2194faf938/public_url" 
+            href="/public/assets/Reports/LinuxEssentialsCert.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-lg font-medium hover:text-green-500 dark:hover:text-green-400 underline flex items-center gap-2"
