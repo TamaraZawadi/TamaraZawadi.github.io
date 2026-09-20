@@ -117,7 +117,7 @@ const App: React.FC = () => {
         About Me,
       </h2>
       <p className="mb-4 text-3xl text-gray-700 dark:text-gray-300">
-        I’m a software engineering student and security enthusiast who loves working 
+        I’m a computer technology student and security enthusiast who loves working 
         under the hood—from optimizing Python automation to analyzing network traffic 
         and exploring cybersecurity frameworks. 
         I believe the best software isn't just functional; it's resilient, secure, 
