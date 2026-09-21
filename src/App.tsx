@@ -23,7 +23,6 @@ const App: React.FC = () => {
       let phraseIndex = 0;
       let charIndex = 0;
       let isDeleting = false;
-      let timeoutId: number;
 
       function type() {
         const currentPhrase = phrases[phraseIndex];
@@ -49,7 +48,7 @@ const App: React.FC = () => {
           typeSpeed = 500;
         }
 
-        timeoutId = setTimeout(type, typeSpeed);
+        setTimeout(type, typeSpeed);
       }
 
       type();
