@@ -1,10 +1,108 @@
 // src/App.tsx
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import "/public/assets/css/particles.css"; 
 
 const App: React.FC = () => {
+  useEffect(() => {
+    // Typewriter functionality
+    function initTypewriter() {
+      const dynamicWordsEl = document.getElementById("dynamicWords");
+      if (!dynamicWordsEl) {
+        setTimeout(initTypewriter, 100);
+        return;
+      }
+
+      const phrases = [
+        "Tamara Zawadi",
+        "A Cybersecurity Enthusiast",
+        "A Tech Innovator"
+      ];
+
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let timeoutId: number;
+
+      function type() {
+        const currentPhrase = phrases[phraseIndex];
+        
+        if (isDeleting) {
+          dynamicWordsEl!.textContent = currentPhrase.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          dynamicWordsEl!.textContent = currentPhrase.substring(0, charIndex + 1);
+          charIndex++;
+        }
+
+        dynamicWordsEl!.textContent += "|";
+
+        let typeSpeed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+          typeSpeed = 2000;
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          typeSpeed = 500;
+        }
+
+        timeoutId = setTimeout(type, typeSpeed);
+      }
+
+      type();
+    }
+
+    // Counter animation
+    function initCounters() {
+      const counters = document.querySelectorAll('[data-counter-target]');
+      counters.forEach(counter => {
+        const targetAttr = counter.getAttribute('data-counter-target');
+        const target = targetAttr ? parseInt(targetAttr) : NaN;
+        if (!isNaN(target)) {
+          let current = 0;
+          const interval = setInterval(() => {
+            if (current < target) {
+              current += Math.ceil(target / 100);
+              if (current > target) current = target;
+              counter.textContent = current.toLocaleString();
+            } else {
+              clearInterval(interval);
+            }
+          }, 20);
+        }
+      });
+    }
+
+    // Logo animation
+    function initLogoAnimation() {
+      const logo = document.getElementById('hacker-logo');
+      if (!logo) return;
+      
+      logo.style.display = 'flex';
+      logo.style.opacity = '0';
+      logo.style.transform = 'translate3d(50px, 20px, 0) rotate(5deg)';
+      logo.style.transition = 'all 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+      
+      requestAnimationFrame(() => {
+        logo.style.opacity = '1';
+        logo.style.transform = 'translate3d(0, 0, 0) rotate(0deg)';
+      });
+    }
+
+    // Start all animations in sequence
+    initTypewriter();
+    const logoTimer = setTimeout(initLogoAnimation, 300);
+    const counterTimer = setTimeout(initCounters, 1000);
+
+    return () => {
+      clearTimeout(logoTimer);
+      clearTimeout(counterTimer);
+    };
+  }, []);
+
   return (
     <>
       <Nav />
@@ -320,7 +418,7 @@ const App: React.FC = () => {
                 <div className="transform transition-all duration-300 hover:scale-105 group">
                   <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                   <svg className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 15v3c0 .5523.44772 1 1 1h8v-8m-9 4v-4m0 4h9m-9-4V6c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v4M3 11h11m6.25 5c0 1.2426-1.0073 2.25-2.25 2.25M20.25 16c0-1.2426-1.0073-2.25-2.25-2.25M20.25 16H21m-3 2.25c-1.2426 0-2.25-1.0074-2.25-2.25M18 18.25V19m-2.25-3c0-1.2426 1.0074-2.25 2.25-2.25M15.75 16H15m3-2.25V13m-1.591 1.409-.5303-.5303m4.2426 4.2426-.5303-.5303m-3.182 0-.5303.5303m4.2426-4.2426-.5303.5303"/>
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M3 15v3c0 .5523.44772 1 1 1h8v-8m-9 4v-4m0 4h9m-9-4V6c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v4M3 11h11m6.25 5c0 1.2426-1.0073 2.25-2.25 2.25M20.25 16c0-1.2426-1.0073-2.25-2.25-2.25M20.25 16H21m-3 2.25c-1.2426 0-2.25-1.0074-2.25-2.25M18 18.25V19m-2.25-3c0-1.2426 1.0074-2.25 2.25-2.25M15.75 16H15m3-2.25V13m-1.591 1.409-.5303-.5303m4.2426 4.2426-.5303-.5303m-3.182 0-.5303.5303m4.2426-4.2426-.5303.5303"/>
                 </svg>
 
                   </div>
@@ -336,53 +434,6 @@ const App: React.FC = () => {
                     View Report
                    </a>
                 </div>
-                {/* <div className="transform transition-all duration-300 hover:scale-105 group">
-                  <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <svg className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 4h12M6 4v16M6 4H5m13 0v16m0-16h1m-1 16H6m12 0h1M6 20H5M9 7h1v1H9V7Zm5 0h1v1h-1V7Zm-5 4h1v1H9v-1Zm5 0h1v1h-1v-1Zm-3 4h2a1 1 0 0 1 1 1v4h-4v-4a1 1 0 0 1 1-1Z"/>
-                  </svg>
-
-                  </div>
-                  <h3 className="mb-2 text-3xl font-bold dark:text-white">Network Infrastructure</h3>
-                  <p className="text-gray-500 text-xl dark:text-gray-400">
-                  Thorough evaluation of network architecture, firewall configurations, access controls, and routing protocols to ensure robust security across your entire digital infrastructure.
-                  </p>
-                </div>
-                <div className="transform transition-all duration-300 hover:scale-105 group">
-                  <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <svg className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.7141 15h4.268c.4043 0 .732-.3838.732-.8571V3.85714c0-.47338-.3277-.85714-.732-.85714H6.71411c-.55228 0-1 .44772-1 1v4m10.99999 7v-3h3v3h-3Zm-3 6H6.71411c-.55228 0-1-.4477-1-1 0-1.6569 1.34315-3 3-3h2.99999c1.6569 0 3 1.3431 3 3 0 .5523-.4477 1-1 1Zm-1-9.5c0 1.3807-1.1193 2.5-2.5 2.5s-2.49999-1.1193-2.49999-2.5S8.8334 9 10.2141 9s2.5 1.1193 2.5 2.5Z"/>
-                  </svg>
-
-                  </div>
-                  <h3 className="mb-2 text-3xl font-bold dark:text-white">Security Consultation</h3>
-                  <p className="text-gray-500 text-xl dark:text-gray-400">
-                  Strategic guidance and expert recommendations to strengthen your security posture, implement industry best practices, and develop effective incident response procedures.
-                  </p>
-                </div>
-                <div className="transform transition-all duration-300 hover:scale-105 group">
-                  <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <svg className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 5 9 4V3m5 2 1-1V3m-3 6v11m0-11a5 5 0 0 1 5 5m-5-5a5 5 0 0 0-5 5m5-5a4.959 4.959 0 0 1 2.973 1H15V8a3 3 0 0 0-6 0v2h.027A4.959 4.959 0 0 1 12 9Zm-5 5H5m2 0v2a5 5 0 0 0 10 0v-2m2.025 0H17m-9.975 4H6a1 1 0 0 0-1 1v2m12-3h1.025a1 1 0 0 1 1 1v2M16 11h1a1 1 0 0 0 1-1V8m-9.975 3H7a1 1 0 0 1-1-1V8"/>
-                </svg>
-                  </div>
-                  <h3 className="mb-2 text-3xl font-bold dark:text-white">Bug Hunting</h3>
-                  <p className="text-gray-500 text-xl dark:text-gray-400">
-                  Discovered and responsibly disclosed over 50 critical vulnerabilities in major platforms, contributing to the security of millions of users worldwide through ethical hacking.
-                  </p>
-                </div>
-                <div className="transform transition-all duration-300 hover:scale-105 group">
-                  <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <svg className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.6144 7.19994c.3479.48981.5999 1.15357.5999 1.80006 0 1.6569-1.3432 3-3 3-1.6569 0-3.00004-1.3431-3.00004-3 0-.67539.22319-1.29865.59983-1.80006M6.21426 6v4m0-4 6.00004-3 6 3-6 2-2.40021-.80006M6.21426 6l3.59983 1.19994M6.21426 19.8013v-2.1525c0-1.6825 1.27251-3.3075 2.95093-3.6488l3.04911 2.9345 3-2.9441c1.7026.3193 3 1.9596 3 3.6584v2.1525c0 .6312-.5373 1.1429-1.2 1.1429H7.41426c-.66274 0-1.2-.5117-1.2-1.1429Z"/>
-                </svg>
-
-                  </div>
-                  <h3 className="mb-2 text-3xl font-bold dark:text-white">Security Training</h3>
-                  <p className="text-gray-500 text-xl dark:text-gray-400">
-                  Customized training programs to educate your team about current security threats, defensive techniques, secure coding practices, and cybersecurity best practices.
-                  </p>
-                </div> */}
               </div>
             </div>
           </section>
@@ -395,7 +446,7 @@ const App: React.FC = () => {
             </h2>
             <form action="#" className="space-y-8">
             <div>
-                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                   Your name
                 </label>
                 <input

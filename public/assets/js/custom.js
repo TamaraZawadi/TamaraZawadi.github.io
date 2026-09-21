@@ -1,5 +1,4 @@
-// public/assets/js/custom.js
-
+                
 document.addEventListener("DOMContentLoaded", () => {
     // Initialize all animations
     function initializeAnimations() {
