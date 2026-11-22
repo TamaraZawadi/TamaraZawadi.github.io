@@ -224,7 +224,7 @@ const App: React.FC = () => {
         My approach combines creative problem-solving with rigorous methodology, ensuring no stone is left unturned in the pursuit of robust security.
       </p>
       <a 
-        href="#" 
+        href="{`${import.meta.env.BASE_URL}/assets/Reports/Tamara_Zawadi_CV.pdf}" 
         className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800"
       >
         Download C.V.
@@ -281,7 +281,7 @@ const App: React.FC = () => {
         </li>
         <li>
           <a 
-            href="/public/assets/Reports/LinuxEssentialsCert.pdf" 
+            href="{`${import.meta.env.BASE_URL}/assets/Reports/LinuxEssentialsCert.pdf}" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-lg font-medium hover:text-green-500 dark:hover:text-green-400 underline flex items-center gap-2"
@@ -406,7 +406,7 @@ const App: React.FC = () => {
                        encapsulation and Protocol Data Units as packets move across network layers.
                   </p>
                   <a 
-                    href="/public/assets/Reports/Week1Assignment2.pdf"
+                    href="{`${import.meta.env.BASE_URL}assets/Reports/Week1Assignment2.pdf`}"
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800">
@@ -426,7 +426,7 @@ const App: React.FC = () => {
                     Used Wireshark to capture and analyze ICMP traffic, investigating the TCP/IP protocol suite to visualize data encapsulation and packet structures.
                   </p>
                    <a 
-                    href="/public/assets/Reports/Week1Assignment1.pdf" 
+                    href="{`${import.meta.env.BASE_URL}/assets/Reports/Week1Assignment1.pdf}" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800">
