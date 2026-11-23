@@ -447,6 +447,7 @@ const App: React.FC = () => {
                   <p className="text-gray-500 text-xl dark:text-gray-400">
                     Performed an AWS IAM privilege-escalation lab involving web enumeration, exposed credentials, Secrets Manager, IAM policy analysis,
                     and cross-account role assumption using an External ID to access sensitive resources.
+                  </p>
                    <a 
                     href="/assets/Reports/Week1Assignment7.pdf" 
                     target="_blank" 
