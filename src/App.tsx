@@ -281,7 +281,7 @@ const App: React.FC = () => {
         </li>
         <li>
           <a 
-            href="{`${import.meta.env.BASE_URL}/assets/Reports/LinuxEssentialsCert.pdf}" 
+            href="/assets/Reports/LinuxEssentialsCert.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-lg font-medium hover:text-green-500 dark:hover:text-green-400 underline flex items-center gap-2"
