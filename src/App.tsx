@@ -512,7 +512,7 @@ const App: React.FC = () => {
                   rows={6}
                   className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50  shadow-sm border-4 border-green-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-black dark:border-green-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Leave a comment..."
-                ></textarea>
+                </textarea>
               </div>
               <button
                 type="submit"
