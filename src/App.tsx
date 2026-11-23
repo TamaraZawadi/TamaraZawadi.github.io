@@ -406,7 +406,7 @@ const App: React.FC = () => {
                        encapsulation and Protocol Data Units as packets move across network layers.
                   </p>
                   <a 
-                    href="/assets/Reports/Week1Assignment2.pdf`"
+                    href="/assets/Reports/Week1Assignment2.pdf"
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800">
