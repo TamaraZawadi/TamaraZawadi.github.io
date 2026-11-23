@@ -368,97 +368,140 @@ const App: React.FC = () => {
   </div>
 </section>
 
-        {/* #### PROJECTS SECTION #### */}
-          <section id="projects" className="pt-8 pb-12 bg-white dark:bg-black flex justify-center items-center">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 text-center">
+      
+{/* #### PROJECTS SECTION #### */}
+<section id="projects" className="pt-8 pb-12 bg-white dark:bg-black flex justify-center items-center">
+  <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 text-center">
 
-              <div className="max-w-screen-md mb-8 lg:mb-12 mx-auto">
-                <h2 className="mb-4 text-4xl md:text-5xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                Breaking Systems, Building Security
-                </h2>
-              </div>
+    <div className="max-w-screen-md mb-8 lg:mb-12 mx-auto">
+      <h2 className="mb-4 text-4xl md:text-5xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        Breaking Systems, Building Security
+      </h2>
+    </div>
 
-              <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-              <div className="transform transition-all duration-300 hover:scale-105 group">
-                  <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                    <svg 
-                      className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125"
-                      aria-hidden="true" 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="24" 
-                      height="24" 
-                      fill="none" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path 
-                        stroke="currentColor" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth="1" 
-                        d="M9.5 11.5 11 13l4-3.5M12 20a16.405 16.405 0 0 1-5.092-5.804A16.694 16.694 0 0 1 5 6.666L12 4l7 2.667a16.695 16.695 0 0 1-1.908 7.529A16.406 16.406 0 0 1 12 20Z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="mb-2 text-3xl font-bold dark:text-white">Investigate the TCP/IP and OSI models</h3>
-                  <p className="text-gray-500 text-xl dark:text-gray-400">
-                      Used Packet Tracer to explore how the TCP/IP protocol suite operates in a live
-                       network environment. Simulation mode allows for the direct visualization of data
-                       encapsulation and Protocol Data Units as packets move across network layers.
-                  </p>
-                  <a 
-                    href="/assets/Reports/Week1Assignment2.pdf"
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800">
-                    View Report
-                   </a>
-                </div>
+    <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
 
-                <div className="transform transition-all duration-300 hover:scale-105 group">
-                  <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <svg className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M3 15v3c0 .5523.44772 1 1 1h8v-8m-9 4v-4m0 4h9m-9-4V6c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v4M3 11h11m6.25 5c0 1.2426-1.0073 2.25-2.25 2.25M20.25 16c0-1.2426-1.0073-2.25-2.25-2.25M20.25 16H21m-3 2.25c-1.2426 0-2.25-1.0074-2.25-2.25M18 18.25V19m-2.25-3c0-1.2426 1.0074-2.25 2.25-2.25M15.75 16H15m3-2.25V13m-1.591 1.409-.5303-.5303m4.2426 4.2426-.5303-.5303m-3.182 0-.5303.5303m4.2426-4.2426-.5303.5303"/>
-                </svg>
+      {/* PROJECT 1 */}
+      <div className="transform transition-all duration-300 hover:scale-105 group">
+        <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+          <svg
+            className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1"
+              d="M9.5 11.5 11 13l4-3.5M12 20a16.405 16.405 0 0 1-5.092-5.804A16.694 16.694 0 0 1 5 6.666L12 4l7 2.667a16.695 16.695 0 0 1-1.908 7.529A16.406 16.406 0 0 1 12 20Z"
+            />
+          </svg>
+        </div>
 
-                  </div>
-                  <h3 className="mb-2 text-3xl font-bold dark:text-white">Packet Analysis & Traffic Inspection</h3>
-                  <p className="text-gray-500 text-xl dark:text-gray-400">
-                    Used Wireshark to capture and analyze ICMP traffic, investigating the TCP/IP protocol suite to visualize data encapsulation and packet structures.
-                  </p>
-                   <a 
-                    href="/assets/Reports/Week1Assignment1.pdf" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800">
-                    View Report
-                   </a>
-                </div>
-              </div>
-            </div>
+        <h3 className="mb-2 text-3xl font-bold dark:text-white">Investigate the TCP/IP and OSI models</h3>
 
-            <div className="transform transition-all duration-300 hover:scale-105 group">
-                  <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                  <svg className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M7 18h10a4 4 0 0 0 .5-7.97A6 6 0 0 0 6 8.5a4.5 4.5 0 0 0 1 9.5Z"/>
-                </svg>
+        <p className="text-gray-500 text-xl dark:text-gray-400">
+          Used Packet Tracer to explore how the TCP/IP protocol suite operates in a live
+          network environment. Simulation mode allows for the direct visualization of data
+          encapsulation and Protocol Data Units as packets move across network layers.
+        </p>
 
-                  </div>
-                  <h3 className="mb-2 text-3xl font-bold dark:text-white">AWS IAM Privilege Escalation</h3>
-                  <p className="text-gray-500 text-xl dark:text-gray-400">
-                    Performed an AWS IAM privilege-escalation lab involving web enumeration, exposed credentials, Secrets Manager, IAM policy analysis,
-                    and cross-account role assumption using an External ID to access sensitive resources.
-                  </p>
-                   <a 
-                    href="/assets/Reports/Week1Assignment7.pdf" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800">
-                    View Report
-                    </a>
-                </div>
-              </div>
-            </div>
-          </section>
+        <a
+          href="/assets/Reports/Week1Assignment2.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800"
+        >
+          View Report
+        </a>
+      </div>
+
+      {/* PROJECT 2 */}
+      <div className="transform transition-all duration-300 hover:scale-105 group">
+        <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+          <svg
+            className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1"
+              d="M3 15v3c0 .5523.44772 1 1 1h8v-8m-9 4v-4m0 4h9m-9-4V6c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v4M3 11h11m6.25 5c0 1.2426-1.0073 2.25-2.25 2.25M20.25 16c0-1.2426-1.0073-2.25-2.25-2.25M20.25 16H21m-3 2.25c-1.2426 0-2.25-1.0074-2.25-2.25M18 18.25V19m-2.25-3c0-1.2426 1.0074-2.25 2.25-2.25M15.75 16H15m3-2.25V13m-1.591 1.409-.5303-.5303m4.2426 4.2426-.5303-.5303m-3.182 0-.5303.5303m4.2426-4.2426-.5303-.5303"
+            />
+          </svg>
+        </div>
+
+        <h3 className="mb-2 text-3xl font-bold dark:text-white">Packet Analysis &amp; Traffic Inspection</h3>
+
+        <p className="text-gray-500 text-xl dark:text-gray-400">
+          Used Wireshark to capture and analyze ICMP traffic, investigating the TCP/IP protocol suite to visualize data encapsulation and packet structures.
+        </p>
+
+        <a
+          href="/assets/Reports/Week1Assignment1.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800"
+        >
+          View Report
+        </a>
+      </div>
+
+      {/* PROJECT 3 */}
+      <div className="transform transition-all duration-300 hover:scale-105 group">
+        <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+          <svg
+            className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1"
+              d="M7 18h10a4 4 0 0 0 .5-7.97A6 6 0 0 0 6 8.5a4.5 4.5 0 0 0 1 9.5Z"
+            />
+          </svg>
+        </div>
+
+        <h3 className="mb-2 text-3xl font-bold dark:text-white">AWS IAM Privilege Escalation</h3>
+
+        <p className="text-gray-500 text-xl dark:text-gray-400">
+          Performed an AWS IAM privilege-escalation lab involving web enumeration, exposed credentials, Secrets Manager, IAM policy analysis,
+          and cross-account role assumption using an External ID to access sensitive resources.
+        </p>
+
+        <a
+          href="/assets/Reports/Week1Assignment7.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800"
+        >
+          View Report
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
          
         {/* #### CONTACT SECTION #### */}
         <section id="contact" className="bg-white dark:bg-black transition-all duration-300 hover:scale-105">
