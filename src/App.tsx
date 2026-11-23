@@ -435,6 +435,28 @@ const App: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            <div className="transform transition-all duration-300 hover:scale-105 group">
+                  <div className="flex justify-center mx-auto items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                  <svg className="w-[48px] h-[48px] text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-green-500 group-hover:scale-125 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M7 18h10a4 4 0 0 0 .5-7.97A6 6 0 0 0 6 8.5a4.5 4.5 0 0 0 1 9.5Z"/>
+                </svg>
+
+                  </div>
+                  <h3 className="mb-2 text-3xl font-bold dark:text-white">AWS IAM Privilege Escalation</h3>
+                  <p className="text-gray-500 text-xl dark:text-gray-400">
+                    Performed an AWS IAM privilege-escalation lab involving web enumeration, exposed credentials, Secrets Manager, IAM policy analysis,
+                    and cross-account role assumption using an External ID to access sensitive resources.
+                   <a 
+                    href="/assets/Reports/Week1Assignment7.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800">
+                    View Report
+                    </a>
+                </div>
+              </div>
+            </div>
           </section>
          
         {/* #### CONTACT SECTION #### */}
